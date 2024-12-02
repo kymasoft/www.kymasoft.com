@@ -1,0 +1,9 @@
+{{ define "main" }}
+<article class="card stack">
+  <header>
+    <h1>{{ .Title }}</h1>
+  </header>
+  {{ .Content }}
+  <p><a href="{{ `microblog/` | relURL }}">Back to microblog</a></p>
+</article>
+{{ end }}

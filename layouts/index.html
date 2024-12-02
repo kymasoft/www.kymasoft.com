@@ -1,0 +1,9 @@
+{{ define "main" }} {{ $about := site.GetPage "/about" }} {{ $contact :=
+site.GetPage "/contact" }}
+<section class="sheet stack">
+  <header class="sheet-header">
+    <h1>{{ .Params.lead }}</h1>
+  </header>
+  {{ .Content }}
+</section>
+{{ end }}

@@ -1,0 +1,29 @@
+{{ define "main" }}
+<section class="sheet stack">
+  <header class="sheet-header">
+    <p class="eyebrow">Microblog</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.lead }}
+    <p class="lead">{{ . }}</p>
+    {{ end }}
+  </header>
+  {{ .Content }} {{ $posts := sort .Pages "File.BaseFileName" "asc" }} {{ if gt
+  (len $posts) 0 }}
+  <ul class="post-list">
+    {{ range $posts }}
+    <li class="post-item">
+      <p class="eyebrow">Essay</p>
+      <h2 class="post-title">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </h2>
+      {{ with .Summary }}
+      <p>{{ . }}</p>
+      {{ end }}
+    </li>
+    {{ end }}
+  </ul>
+  {{ else }}
+  <p>No posts published yet.</p>
+  {{ end }}
+</section>
+{{ end }}

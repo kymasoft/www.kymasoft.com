@@ -1,0 +1,11 @@
+{{ define "main" }}
+<section class="sheet stack">
+  <header class="sheet-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.lead }}
+    <p class="lead">{{ . }}</p>
+    {{ end }}
+  </header>
+  {{ .Content }}
+</section>
+{{ end }}

@@ -1,0 +1,30 @@
+services:
+  site:
+    build:
+      context: .
+      args:
+        HUGO_VERSION: ${HUGO_VERSION:-0.158.0}
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+      - node_modules:/workspace/node_modules
+    environment:
+      PREVIEW_PORT: ${PREVIEW_PORT:-1315}
+      PREVIEW_BASE_URL: ${PREVIEW_BASE_URL:-http://localhost:1315}
+    ports:
+      - "${PREVIEW_PORT:-1315}:${PREVIEW_PORT:-1315}"
+    command: bash -lc "npm ci && npm run serve"
+
+  verify:
+    build:
+      context: .
+      args:
+        HUGO_VERSION: ${HUGO_VERSION:-0.158.0}
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+      - node_modules:/workspace/node_modules
+    command: bash -lc "npm ci && npm run verify"
+
+volumes:
+  node_modules:
