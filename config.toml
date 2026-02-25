@@ -1,0 +1,13 @@
+baseURL = "https://www.kymasoft.com"
+languageCode = "en-us"
+title = "KYMASOFT"
+disableKinds = ["sitemap", "taxonomy", "term", "RSS"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  description = "Independent software engineering, minimal noise."
+  keywords = "kymasoft, software engineering, consultancy, embedded, systems"

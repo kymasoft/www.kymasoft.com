@@ -1,0 +1,24 @@
+<header class="topbar">
+  <a class="brand" href="{{ `` | relURL }}">
+    <img src="{{ `kymasoft-logo-01.png` | relURL }}" alt="KYMASOFT logo" />
+    <span>KYMASOFT</span>
+  </a>
+  <nav>
+    <a class="{{ if .IsHome }}active{{ end }}" href="{{ `` | relURL }}">Home</a>
+    <a
+      class="{{ if eq .RelPermalink (`about/` | relURL) }}active{{ end }}"
+      href="{{ `about/` | relURL }}"
+      >About</a
+    >
+    <a
+      class="{{ if eq .RelPermalink (`contact/` | relURL) }}active{{ end }}"
+      href="{{ `contact/` | relURL }}"
+      >Contact</a
+    >
+    <a
+      class="{{ if eq .RelPermalink (`microblog/` | relURL) }}active{{ end }}"
+      href="{{ `microblog/` | relURL }}"
+      >Microblog</a
+    >
+  </nav>
+</header>

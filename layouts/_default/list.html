@@ -1,0 +1,11 @@
+{{ define "main" }}
+<section class="card stack">
+  <div>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.lead }}
+    <p>{{ . }}</p>
+    {{ end }}
+  </div>
+  {{ .Content }}
+</section>
+{{ end }}

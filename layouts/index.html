@@ -1,0 +1,28 @@
+{{ define "main" }}
+<section class="card stack">
+  <div>
+    <h1>Independent software engineering, minimal noise.</h1>
+    <p>
+      KYMASOFT is a solo consultancy by Gael Aguiar. This site is a lightweight
+      place for practical information and quick updates.
+    </p>
+  </div>
+  <div class="grid">
+    <section class="card">
+      <h2>About</h2>
+      <p>Who I am, what I work on, and how I like to collaborate.</p>
+      <p><a href="{{ `about/` | relURL }}">Open about page</a></p>
+    </section>
+    <section class="card">
+      <h2>Contact</h2>
+      <p>Email, scheduling link, and LinkedIn.</p>
+      <p><a href="{{ `contact/` | relURL }}">Open contact page</a></p>
+    </section>
+    <section class="card">
+      <h2>Microblog</h2>
+      <p>Short notes on engineering work and decisions.</p>
+      <p><a href="{{ `microblog/` | relURL }}">Open microblog</a></p>
+    </section>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,17 @@
+{{ define "main" }}
+<section class="card stack">
+  <div>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.lead }}
+    <p>{{ . }}</p>
+    {{ end }}
+  </div>
+  {{ .Content }} {{ with .Params.entries }}
+  <ul class="micro">
+    {{ range . }}
+    <li><time datetime="{{ .date }}">{{ .date }}</time>{{ .text }}</li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</section>
+{{ end }}
