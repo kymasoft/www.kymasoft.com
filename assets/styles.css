@@ -1,0 +1,201 @@
+:root {
+  --bg: #f3f8fc;
+  --bg-alt: #e8f2fa;
+  --surface: rgba(255, 255, 255, 0.9);
+  --surface-strong: #ffffff;
+  --text: #163248;
+  --muted: #5f778b;
+  --line: rgba(18, 71, 106, 0.2);
+  --accent: #0079ca;
+  --accent-soft: rgba(0, 121, 202, 0.1);
+  --shadow: 0 12px 38px rgba(13, 52, 80, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Avenir Next", "Avenir", "Segoe UI", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(1300px 700px at 0% -10%, #d9edfb 0%, transparent 60%),
+    radial-gradient(1200px 750px at 100% 0%, #e8f4ff 0%, transparent 65%),
+    linear-gradient(180deg, var(--bg), var(--bg-alt));
+  line-height: 1.45;
+  overflow-x: hidden;
+}
+
+.bg-graph {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.55;
+  mix-blend-mode: multiply;
+}
+
+.bg-graph svg {
+  width: 100%;
+  height: 100%;
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 1.2rem 1.1rem 2rem;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  background: var(--surface);
+  border: 1px solid rgba(10, 61, 98, 0.16);
+  border-radius: 14px;
+  padding: 0.7rem 0.95rem;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(4px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.brand img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid rgba(20, 83, 128, 0.18);
+  background: #fff;
+  padding: 0.18rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+nav a {
+  padding: 0.35rem 0.62rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  color: #205072;
+  text-decoration: none;
+  font-size: 0.92rem;
+}
+
+nav a:hover {
+  background: var(--accent-soft);
+  border-color: rgba(0, 121, 202, 0.32);
+}
+
+nav a.active {
+  background: rgba(0, 121, 202, 0.14);
+  border-color: rgba(0, 121, 202, 0.38);
+  color: #0a436d;
+}
+
+.card {
+  background: var(--surface-strong);
+  border: 1px solid rgba(10, 61, 98, 0.14);
+  border-radius: 15px;
+  padding: 1.1rem;
+  box-shadow: var(--shadow);
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  line-height: 1.15;
+}
+
+h2 {
+  margin: 0 0 0.55rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #4f6d82;
+}
+
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.42rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.stack {
+  display: grid;
+  gap: 0.9rem;
+}
+
+a {
+  color: var(--accent);
+}
+
+.micro {
+  list-style: none;
+  padding-left: 0;
+  gap: 0.65rem;
+}
+
+.micro li {
+  background: #f6fbff;
+  border: 1px solid rgba(15, 78, 120, 0.14);
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+}
+
+.micro time {
+  display: block;
+  color: #527389;
+  font-size: 0.8rem;
+  margin-bottom: 0.16rem;
+}
+
+footer {
+  margin-top: 0.85rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+@media (max-width: 760px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

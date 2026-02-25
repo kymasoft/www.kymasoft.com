@@ -1,56 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KYMASOFT</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
-            min-height: 100vh;
-            background-color: white;
-        }
-        img {
-            max-width: 100%;
-            max-height: 80vh;
-            object-fit: contain;
-        }
-        a {
-            text-decoration: none;
-            color: #0071bc;
-        }
-        .left {
-            text-align: left;
-        }
-        .grayed {
-            color: #878787;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KYMASOFT</title>
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-    <img src="kymasoft-logo-01.png" alt="kymasoft logo">
+  <div class="bg-graph" aria-hidden="true"><svg id="graph-bg"></svg></div>
+  <main class="page">
+    <header class="topbar">
+      <a class="brand" href="index.html">
+        <img src="kymasoft-logo-01.png" alt="KYMASOFT logo">
+        <span>KYMASOFT</span>
+      </a>
+      <nav>
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="microblog.html">Microblog</a>
+      </nav>
+    </header>
 
-    <h1>Gael Aguiar<sup>*</sup></h1>
-    <h2>Software Consultant. Problem Solver.</h2>
-    <ul>
-        <li>Mechatronics Engineer with almost 10 years of experience in Software Engineer positions</li>
-        <li>Programming: mainly in C++ and C; but have worked in Java, C#, Kotlin, python, and many others</li>
-        <li>Linux, embedded systems, software architecture, infrastructure/automation applied to software (tests and validation, distribution, updates, ...)</li>
-        <li>Fluent in English, French and Spanish</li>
-        <li>Based in France (currently in Grenoble), but I am open and willing to relocate</li>
-    </ul>
-    <h2>Contact me</h2>
-    <ul>
-        <li><a href="https://calendar.app.google/u4YZRxp9mXA3o95u5" target="_blank">Schedule a "Discovery Call" in my Google Calendar</a> (preferred: most efficient and respectful)</li>
-        <li>Send an email to <a href="mailto:gael.aguiar@kymasoft.com">gael.aguiar@kymasoft.com</a> (will try my best to answer)</li>
-        <li>Connect with me on <a href="https://www.linkedin.com/in/gael-aguiar">LinkedIn</a></li>
-    </ul>
-    <footer class="grayed"><sup>*</sup>As of today, KYMASOFT is just me!</footer>
+    <section class="card stack">
+      <div>
+        <h1>Independent software engineering, minimal noise.</h1>
+        <p>KYMASOFT is a solo consultancy by Gael Aguiar. This site is a lightweight place for practical information and quick updates.</p>
+      </div>
+      <div class="grid">
+        <section class="card">
+          <h2>About</h2>
+          <p>Who I am, what I work on, and how I like to collaborate.</p>
+          <p><a href="about.html">Open about page</a></p>
+        </section>
+        <section class="card">
+          <h2>Contact</h2>
+          <p>Email, scheduling link, and LinkedIn.</p>
+          <p><a href="contact.html">Open contact page</a></p>
+        </section>
+        <section class="card">
+          <h2>Microblog</h2>
+          <p>Short notes on engineering work and decisions.</p>
+          <p><a href="microblog.html">Open microblog</a></p>
+        </section>
+      </div>
+    </section>
+
+    <footer>One engineer. One point of contact.</footer>
+  </main>
+  <script src="assets/graph-bg.js"></script>
 </body>
 </html>
-
