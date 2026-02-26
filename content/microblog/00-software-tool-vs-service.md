@@ -3,6 +3,8 @@ title: Software “as a Tool” vs “as a Service”
 summary: Pricing, usage and other considerations
 ---
 
+Unmanaged vs managed
+
 |                    | **Software as a Tool (pay once)** | **Software as a Service (pay monthly)**            |
 | ------------------ | --------------------------------- | -------------------------------------------------- |
 | What it is         | Something you buy and keep        | Something you use continuously                     |

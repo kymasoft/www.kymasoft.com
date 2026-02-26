@@ -1,4 +1,5 @@
-{{ define "main" }}
+{{ define "main" }} {{ $about := site.GetPage "/about" }} {{ $contact :=
+site.GetPage "/contact" }} {{ $microblog := site.GetPage "/microblog" }}
 <section class="card stack">
   <div>
     <h1>Independent software engineering, minimal noise.</h1>
@@ -9,18 +10,30 @@
   </div>
   <div class="grid">
     <section class="card">
-      <h2>About</h2>
-      <p>Who I am, what I work on, and how I like to collaborate.</p>
+      <h2>{{ with $about }}{{ .Title }}{{ else }}About{{ end }}</h2>
+      <p>
+        {{ with $about }}{{ with .Params.lead }}{{ . }}{{ else }}Who I am, what
+        I work on, and how I like to collaborate.{{ end }}{{ else }}Who I am,
+        what I work on, and how I like to collaborate.{{ end }}
+      </p>
       <p><a href="{{ `about/` | relURL }}">Open about page</a></p>
     </section>
     <section class="card">
-      <h2>Contact</h2>
-      <p>Email, scheduling link, and LinkedIn.</p>
+      <h2>{{ with $contact }}{{ .Title }}{{ else }}Contact{{ end }}</h2>
+      <p>
+        {{ with $contact }}{{ with .Params.lead }}{{ . }}{{ else }}Email,
+        scheduling link, and LinkedIn.{{ end }}{{ else }}Email, scheduling link,
+        and LinkedIn.{{ end }}
+      </p>
       <p><a href="{{ `contact/` | relURL }}">Open contact page</a></p>
     </section>
     <section class="card">
-      <h2>microblog</h2>
-      <p>Short notes on engineering work and decisions.</p>
+      <h2>{{ with $microblog }}{{ .Title }}{{ else }}microblog{{ end }}</h2>
+      <p>
+        {{ with $microblog }}{{ with .Params.lead }}{{ . }}{{ else }}Short notes
+        on engineering work and decisions.{{ end }}{{ else }}Short notes on
+        engineering work and decisions.{{ end }}
+      </p>
       <p><a href="{{ `microblog/` | relURL }}">Open microblog</a></p>
     </section>
   </div>

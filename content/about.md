@@ -1,14 +1,10 @@
 ---
 title: About
-lead: KYMASOFT is just me, Gael Aguiar. I run it as a solo software engineering consultancy.
+lead: More about the company.
 ---
 
-## Focus
+Not much to share. KYMASOFT has until now been a solo software engineering consultancy.
 
-- Design and delivery of maintainable software systems.
-- Embedded and systems-level engineering.
-- Validation, release, and operational reliability.
+However, it may be mutating into a software product provider. We will see.
 
-## How I Work
-
-Direct collaboration, practical scope, and outcomes that can be measured in production.
+- Location: Grenoble, France.
