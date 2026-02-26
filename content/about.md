@@ -1,7 +1,6 @@
 ---
 title: About
 lead: KYMASOFT is just me, Gael Aguiar. I run it as a solo software engineering consultancy.
-footer: Small by design. Focused by necessity.
 ---
 
 ## Focus

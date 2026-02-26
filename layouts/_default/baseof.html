@@ -17,10 +17,7 @@
     <div class="bg-graph" aria-hidden="true"><svg id="graph-bg"></svg></div>
     <main class="page">
       {{ partial "header.html" . }} {{ block "main" . }}{{ end }}
-      <footer>
-        {{ with .Params.footer }}{{ . }}{{ else }}One engineer. One point of
-        contact.{{ end }}
-      </footer>
+      <footer>KYMASOFT</footer>
     </main>
     <script src="{{ `assets/graph-bg.js` | relURL }}"></script>
   </body>

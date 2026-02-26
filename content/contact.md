@@ -1,7 +1,6 @@
 ---
 title: Contact
 lead: Use whichever path is easiest for you.
-footer: Responses are direct and practical.
 ---
 
 ## Channels
