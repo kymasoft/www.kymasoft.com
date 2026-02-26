@@ -1,4 +1,5 @@
 <header class="topbar">
+  {{ $isMicroblog := eq .Section "microblog" }}
   <a class="brand" href="{{ `` | relURL }}">
     <img src="{{ `kymasoft-logo-01.png` | relURL }}" alt="KYMASOFT logo" />
     <span>KYMASOFT</span>
@@ -16,9 +17,9 @@
       >Contact</a
     >
     <a
-      class="{{ if eq .RelPermalink (`microblog/` | relURL) }}active{{ end }}"
+      class="{{ if $isMicroblog }}active{{ end }}"
       href="{{ `microblog/` | relURL }}"
-      >Microblog</a
+      >microblog</a
     >
   </nav>
 </header>

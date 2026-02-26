@@ -1,0 +1,14 @@
+{{ define "main" }}
+<article class="card stack">
+  <header>
+    <p class="post-date">
+      <time datetime="{{ .Date.Format `2006-01-02` }}"
+        >{{ .Date.Format "January 2, 2006" }}</time
+      >
+    </p>
+    <h1>{{ .Title }}</h1>
+  </header>
+  {{ .Content }}
+  <p><a href="{{ `microblog/` | relURL }}">Back to microblog</a></p>
+</article>
+{{ end }}
