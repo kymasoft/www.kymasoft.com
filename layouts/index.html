@@ -1,13 +1,6 @@
 {{ define "main" }} {{ $about := site.GetPage "/about" }} {{ $contact :=
 site.GetPage "/contact" }} {{ $microblog := site.GetPage "/microblog" }}
 <section class="card stack">
-  <div>
-    <h1>Independent software engineering, minimal noise.</h1>
-    <p>
-      KYMASOFT is a solo consultancy by Gael Aguiar. This site is a lightweight
-      place for practical information and quick updates.
-    </p>
-  </div>
   <div class="grid">
     <section class="card">
       <h2>{{ with $about }}{{ .Title }}{{ else }}About{{ end }}</h2>
