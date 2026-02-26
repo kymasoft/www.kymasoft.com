@@ -6,16 +6,11 @@
     <p>{{ . }}</p>
     {{ end }}
   </div>
-  {{ .Content }} {{ $posts := .Pages.ByDate.Reverse }} {{ if gt (len $posts) 0
-  }}
+  {{ .Content }} {{ $posts := sort .Pages "File.BaseFileName" "desc" }} {{ if gt
+  (len $posts) 0 }}
   <ul class="post-list">
     {{ range $posts }}
     <li class="post-item">
-      <p class="post-date">
-        <time datetime="{{ .Date.Format `2006-01-02` }}"
-          >{{ .Date.Format "January 2, 2006" }}</time
-        >
-      </p>
       <h2 class="post-title">
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       </h2>
