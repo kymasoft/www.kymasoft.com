@@ -16,4 +16,5 @@ Grenoble, France.
 I may not be able to answer every message, but if you insist I probably will.
 
 ## More about me
+
 - Professional site: [pro.gaelaguiar.net](https://pro.gaelaguiar.net)
