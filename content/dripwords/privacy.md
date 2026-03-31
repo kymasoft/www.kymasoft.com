@@ -1,5 +1,7 @@
 ---
 title: Dripwords Legal
+aliases:
+  - /dripwords/privacy.html
 ---
 
 ## Last updated
